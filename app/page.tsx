@@ -3,16 +3,9 @@ import { GrAnnounce } from "react-icons/gr";
 
 export default function Home() {
   return (
-    <div className="container flex justify-center">
-      <div className="mt-10 h-[444px] w-[444px] border-2 border-gray-300 rounded-sm flex flex-col gap-4 justify-center items-center p-6">
-        <div className="flex justify-center items-center h-[250px] w-[250px] bg-gray-200 rounded-sm">
-          <GrAnnounce size={68} color="gray" />
-        </div>
-        <span className="text-sm text-center">
-          Fitur ini belum tersedia untuk saat ini. Silahkan kembali ke laman
-          awal.
-        </span>
-        <SubmitButton text={"Back to Home"} />
+    <div className="flex justify-center items-center">
+      <div className="flex flex-shrink-0 justify-center items-center h-[700px] w-[1311px] bg-gray-100 rounded-sm mt-8">
+        <GrAnnounce size={68} color="gray" />
       </div>
     </div>
   );
