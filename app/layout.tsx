@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import Navbar from "@/components/navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "Sundas Website",
@@ -19,7 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex flex-1 justify-center items-center">
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }
