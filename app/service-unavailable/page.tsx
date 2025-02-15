@@ -1,7 +1,7 @@
 import { SubmitButton } from "@/components/form/Buttons";
 import { GrAnnounce } from "react-icons/gr";
 
-export default function Home() {
+function ServiceUnavailable() {
   return (
     <div className="container flex justify-center">
       <div className="mt-10 h-[444px] w-[444px] border-2 border-gray-300 rounded-sm flex flex-col gap-4 justify-center items-center p-6">
@@ -17,3 +17,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default ServiceUnavailable;
