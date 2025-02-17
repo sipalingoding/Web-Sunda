@@ -1,3 +1,4 @@
+import { SubmitButton } from "@/components/form/Buttons";
 import Navbar from "@/components/navbar/Navbar";
 import { GrAnnounce } from "react-icons/gr";
 
@@ -17,7 +18,7 @@ function DetailRumahPage() {
         </div>
         <div className="col-span-3 space-y-6">
           <span className="font-semibold">Judul materi berjalan</span>
-          <div className="border border-gray-200 rounded-sm h-[490px] p-4">
+          <div className="border border-gray-200 rounded-sm h-[490px] p-4 space-y-12 overflow-y-auto">
             <div className="text-right">
               <h2 className="font-semibold">User</h2>
               <p>
@@ -26,6 +27,27 @@ function DetailRumahPage() {
                 expedita. Quaerat labore cum adipisci perferendis debitis
                 molestiae tenetur maiores. Optio, ipsam culpa.
               </p>
+            </div>
+            <div className="text-left">
+              <h2 className="font-semibold">Karakter</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                porro odit libero animi deleniti saepe perferendis laboriosam
+                expedita. Quaerat labore cum adipisci perferendis debitis
+                molestiae tenetur maiores. Optio, ipsam culpa.
+              </p>
+            </div>
+            <div className="text-right">
+              <h2 className="font-semibold">User</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                porro odit libero animi deleniti saepe perferendis laboriosam
+                expedita. Quaerat labore cum adipisci perferendis debitis
+                molestiae tenetur maiores. Optio, ipsam culpa.
+              </p>
+            </div>
+            <div className="flex justify-end">
+              <SubmitButton text="Next" />
             </div>
           </div>
         </div>

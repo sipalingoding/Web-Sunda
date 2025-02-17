@@ -8,11 +8,13 @@ import { FaPlus } from "react-icons/fa6";
 type SubmitButtonProps = {
   className?: string;
   text?: string;
+  withIcon?: boolean;
 };
 
 export function SubmitButton({
   className = "",
   text = "submit",
+  withIcon = false,
 }: SubmitButtonProps) {
   const { pending } = useFormStatus();
   return (
@@ -28,7 +30,7 @@ export function SubmitButton({
         </>
       ) : (
         <div className="flex flex-row gap-3">
-          <FaPlus />
+          {withIcon && <FaPlus />}
           <span>{text}</span>
         </div>
       )}
