@@ -22,8 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex justify-center items-center">{children}</main>
+          <main className="flex flex-1 justify-center items-center">
+            {children}
+          </main>
         </div>
       </body>
     </html>
