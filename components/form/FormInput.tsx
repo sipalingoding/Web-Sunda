@@ -16,7 +16,6 @@ function FormInput(prop: propInput) {
       placeholder={placeholder}
       name={name}
       defaultValue={defaultValue}
-      
     />
   );
 }
