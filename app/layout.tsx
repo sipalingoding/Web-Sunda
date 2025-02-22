@@ -1,12 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
-
-export const metadata: Metadata = {
-  title: "Sundas Website",
-  description: "Learn about sunda, everything,",
-};
+import { usePathname } from "next/navigation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,14 +15,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const hideNavbar = ["/login", "/register"].includes(pathname);
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="flex flex-col min-h-screen">
-          <main className="flex flex-1 justify-center items-center">
-            {children}
-          </main>
-        </div>
+        {!hideNavbar && <Navbar />}
+
+        <main>{children}</main>
       </body>
     </html>
   );
