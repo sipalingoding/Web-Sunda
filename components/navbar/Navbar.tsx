@@ -1,27 +1,49 @@
-import { FaPlus } from "react-icons/fa6";
+import { FaMoneyCheckDollar, FaNewspaper, FaRegUser } from "react-icons/fa6";
+import { RiErrorWarningFill } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 function Navbar() {
   return (
-    <nav className="">
-      <div className="container absolute top-1 left-1/2 transform -translate-x-1/2 flex justify-between items-center py-4 gap-2">
-        <div className="flex gap-2 items-center bg-white rounded-3xl p-3">
-          <FaPlus />
-          <span className="text-sm">Donasi</span>
+    <nav className="border-b-2">
+      <div className="container flex flex-col sm:flex-row sm:justify-between sm:items-center flex-wrap gap-4 py-4 bg-transparent backdrop-blur-md">
+        <div className="flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+          <FaMoneyCheckDollar />
+          <span className="text-xs">Donasi</span>
         </div>
-        <div className="flex gap-2 items-center bg-white rounded-3xl p-3">
-          <FaPlus />
-          <span className="text-sm">Berita</span>
+        <div className="flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+          <FaNewspaper />
+          <span className="text-xs">Berita</span>
         </div>
 
         <span className="text-xl font-bold">Investasi Kehidupan</span>
-        <div className="flex gap-2 items-center bg-white rounded-3xl p-3">
-          <FaPlus />
-          <span className="text-sm">About Us</span>
+        <div className="flex gap-3 items-center bg-green-500 text-white  rounded-2xl py-3 px-4">
+          <RiErrorWarningFill />
+          <span className="text-xs">About Us</span>
         </div>
-        <div className="flex gap-2 items-center bg-white rounded-3xl p-3">
-          <FaPlus />
-          <span className="text-sm">Nama User</span>
-        </div>
+
+        <DropdownMenu>
+          <DropdownMenuTrigger className="flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+            <FaRegUser />
+            <span className="text-xs">Sign Up / Login</span>
+            <IoIosArrowDown />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Billing</DropdownMenuItem>
+            <DropdownMenuItem>Team</DropdownMenuItem>
+            <DropdownMenuItem>Subscription</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </nav>
   );

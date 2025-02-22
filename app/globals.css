@@ -70,3 +70,14 @@
     @apply mx-auto max-w-6xl xl:max-w-7xl px-8;
   }
 }
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
