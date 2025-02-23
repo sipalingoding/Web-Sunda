@@ -2,12 +2,16 @@
 
 import { SubmitButton } from "@/components/form/Buttons";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const images = ["/image1.jpg", "/image2.jpg", "/image3.jpg"];
 
-function LoginPage() {
+export default function LoginPage() {
+  const router = useRouter();
   const [index, setIndex] = useState(0);
+  const [user, setUser] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +22,12 @@ function LoginPage() {
 
   const handleDotClick = (i: number) => {
     setIndex(i);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    localStorage.setItem("user", JSON.stringify(user));
+    router.push("/");
   };
   return (
     <div className="grid grid-cols-2 w-full min-h-screen">
@@ -41,11 +51,12 @@ function LoginPage() {
       </div>
       <div className="bg-white flex flex-col gap-16 items-center justify-center rounded-r-2xl">
         <h2 className="text-center text-lg font-semibold">Sampurasun</h2>
-        <form className="space-y-5 w-80">
+        <form className="space-y-5 w-80" onSubmit={handleSubmit}>
           <Input
-            type="email"
-            placeholder="Email"
+            type="text"
+            placeholder="Nama"
             className="w-full px-4 py-3"
+            onChange={(e) => setUser(e.target.value)}
           />
           <Input
             type="password"
@@ -73,11 +84,12 @@ function LoginPage() {
         </form>
 
         <p className="text-center text-xs tracking-[1.5px] mt-6">
-          BELUM PUNYA AKUN? DAFTAR DISINI
+          BELUM PUNYA AKUN?{" "}
+          <span className="font-semibold">
+            <Link href={"/register"}>DAFTAR DISINI</Link>
+          </span>
         </p>
       </div>
     </div>
   );
 }
-
-export default LoginPage;
