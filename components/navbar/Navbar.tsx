@@ -14,6 +14,21 @@ import {
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { TbWorld } from "react-icons/tb";
+
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Button } from "../ui/button";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
 
 function Navbar() {
   const router = useRouter();
@@ -38,24 +53,66 @@ function Navbar() {
 
   return (
     <nav className="border-b-2">
-      <div className="container flex flex-col sm:flex-row sm:justify-between sm:items-center flex-wrap gap-4 py-4 bg-transparent backdrop-blur-md">
-        <div className="flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+      <div className="container flex flex-col md:flex-row lg:justify-between items-center flex-wrap gap-4 py-4 bg-transparent backdrop-blur-md">
+        <div className="hidden lg:flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
           <FaMoneyCheckDollar />
           <span className="text-xs">Donasi</span>
         </div>
-        <div className="flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+        <div className="hidden lg:flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
           <FaNewspaper />
           <span className="text-xs">Berita</span>
         </div>
-
+        <div className="grid grid-cols-2 gap-2 lg:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <TbWorld size={30} />
+            </SheetTrigger>
+            <SheetContent side={"left"}>
+              <SheetHeader>
+                <SheetTitle>Edit profile</SheetTitle>
+                <SheetDescription>
+                  Make changes to your profile here. Click save when you're
+                  done.
+                </SheetDescription>
+              </SheetHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="name" className="text-right">
+                    Name
+                  </Label>
+                  <Input
+                    id="name"
+                    value="Pedro Duarte"
+                    className="col-span-3"
+                  />
+                </div>
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="username" className="text-right">
+                    Username
+                  </Label>
+                  <Input
+                    id="username"
+                    value="@peduarte"
+                    className="col-span-3"
+                  />
+                </div>
+              </div>
+              <SheetFooter>
+                <SheetClose asChild>
+                  <Button type="submit">Save changes</Button>
+                </SheetClose>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
         <span className="text-xl font-bold">Investasi Kehidupan</span>
-        <div className="flex gap-3 items-center bg-green-500 text-white  rounded-2xl py-3 px-4">
+        <div className="hidden lg:flex gap-3 items-center bg-green-500 text-white  rounded-2xl py-3 px-4">
           <RiErrorWarningFill />
           <span className="text-xs">About Us</span>
         </div>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+          <DropdownMenuTrigger className="hidden lg:flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
             <FaRegUser />
             <span className="text-xs">{name}</span>
             <IoIosArrowDown />
