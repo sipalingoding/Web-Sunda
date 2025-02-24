@@ -22,8 +22,8 @@ function RegisterPage() {
     setIndex(i);
   };
   return (
-    <div className="grid grid-cols-2 w-full min-h-screen">
-      <div className="bg-gray-300 flex items-center justify-center relative rounded-l-2xl overflow-hidden">
+    <div className="flex flex-col md:grid md:grid-cols-2 w-full md:min-h-screen h-screen">
+      <div className="bg-gray-300 flex items-center justify-center relative rounded-l-2xl overflow-hidden h-1/3 md:h-full">
         <Image
           src={images[index]}
           alt="carousel"
@@ -43,8 +43,10 @@ function RegisterPage() {
           ))}
         </div>
       </div>
-      <div className="bg-white flex flex-col gap-16 items-center justify-center rounded-r-2xl">
-        <h2 className="text-center text-lg font-semibold">Sampurasun</h2>
+      <div className="bg-white flex flex-col gap-16 items-center justify-center rounded-r-2xl h-2/3 md:h-full">
+        <h2 className="text-center text-lg font-semibold mt-12 md:mt-0">
+          Sampurasun
+        </h2>
         <form className="space-y-5 w-80">
           <Input type="text" placeholder="Nama" className="w-full px-4 py-3" />
           <Input

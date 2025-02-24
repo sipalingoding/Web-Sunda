@@ -69,39 +69,26 @@ function Navbar() {
             </SheetTrigger>
             <SheetContent side={"left"}>
               <SheetHeader>
-                <SheetTitle>Edit profile</SheetTitle>
-                <SheetDescription>
-                  Make changes to your profile here. Click save when you're
-                  done.
-                </SheetDescription>
+                <SheetTitle>Investasi Kehidupan</SheetTitle>
               </SheetHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="name" className="text-right">
-                    Name
-                  </Label>
-                  <Input
-                    id="name"
-                    value="Pedro Duarte"
-                    className="col-span-3"
-                  />
+              <div className="grid gap-8 py-8">
+                <div className="flex flex-row items-center gap-4">
+                  <FaNewspaper />
+                  <span className="text-sm">Berita</span>
                 </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="username" className="text-right">
-                    Username
-                  </Label>
-                  <Input
-                    id="username"
-                    value="@peduarte"
-                    className="col-span-3"
-                  />
+                <div className="flex flex-row items-center gap-4">
+                  <FaMoneyCheckDollar />
+                  <span className="text-sm">Donasi</span>
+                </div>
+                <div className="flex flex-row items-center gap-4">
+                  <RiErrorWarningFill />
+                  <span className="text-sm">About Us</span>
+                </div>
+                <div className="flex flex-row items-center gap-4">
+                  <FaRegUser />
+                  <span className="text-sm">{name}</span>
                 </div>
               </div>
-              <SheetFooter>
-                <SheetClose asChild>
-                  <Button type="submit">Save changes</Button>
-                </SheetClose>
-              </SheetFooter>
             </SheetContent>
           </Sheet>
         </div>
