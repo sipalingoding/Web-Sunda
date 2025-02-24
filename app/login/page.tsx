@@ -30,8 +30,8 @@ export default function LoginPage() {
     router.push("/");
   };
   return (
-    <div className="grid grid-cols-2 w-full min-h-screen">
-      <div className="bg-gray-300 flex items-center justify-center relative rounded-l-2xl overflow-hidden">
+    <div className="flex flex-col md:grid md:grid-cols-2 w-full h-screen md:min-h-screen">
+      <div className="bg-gray-300 flex items-center justify-center relative rounded-l-2xl overflow-hidden h-1/3 md:h-full">
         <img
           src={images[index]}
           alt="carousel"
@@ -49,7 +49,7 @@ export default function LoginPage() {
           ))}
         </div>
       </div>
-      <div className="bg-white flex flex-col gap-16 items-center justify-center rounded-r-2xl">
+      <div className="bg-white flex flex-col gap-16 items-center justify-center rounded-r-2xl h-2/3 md:h-full">
         <h2 className="text-center text-lg font-semibold">Sampurasun</h2>
         <form className="space-y-5 w-80" onSubmit={handleSubmit}>
           <Input
