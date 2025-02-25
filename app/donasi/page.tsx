@@ -4,7 +4,7 @@ import React from "react";
 function DonasiPage() {
   return (
     <div className="container flex flex-col md:grid md:grid-cols-2 gap-8 mt-8 mb-8">
-      <div className="border-2 w-full border-gray-200 h-[640px] rounded-sm p-8 flex flex-col gap-6 items-center">
+      <div className="border-2 w-full border-gray-200 h-full md:h-[640px] rounded-sm p-4 md:p-8 flex flex-col gap-6 items-center">
         <h1 className="font-semibold text-3xl">Hatur nuhun</h1>
         <span className="text-center">
           parantos mantosan arurang ngamumule bahasa sareng budaya Sunda ku cara
@@ -39,7 +39,7 @@ function DonasiPage() {
             </span>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           <div className="flex flex-col gap-6">
             <span className="flex gap-4 items-center">
               <div className="w-8 h-8 rounded-full bg-gray-400 flex justify-center items-center">
@@ -92,7 +92,7 @@ function DonasiPage() {
               <span>NAMI DONATUR</span>
             </span>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="md:flex md:flex-col gap-6 hidden">
             <span className="flex gap-4 items-center">
               <div className="w-8 h-8 rounded-full bg-gray-400 flex justify-center items-center">
                 <span className="text-white text-xs">MK</span>
@@ -126,14 +126,14 @@ function DonasiPage() {
         </div>
       </div>
       <div className="w-full flex flex-col gap-6">
-        <div className="flex flex-col justify-center items-center border-2 border-gray-200 rounded-sm h-[295px] p-6 gap-6">
+        <div className="flex flex-col justify-center items-center md:border-2 md:border-gray-200 rounded-sm h-[295px] p-2 gap-6">
           <span className="font-medium">Sponsor</span>
-          <div className="flex justify-center gap-16">
+          <div className="flex justify-center gap-8 md:gap-16">
             <div className="h-[86px] w-[86px] bg-gray-300 rounded-full"></div>
             <div className="h-[86px] w-[86px] bg-gray-300 rounded-full"></div>
             <div className="h-[86px] w-[86px] bg-gray-300 rounded-full"></div>
           </div>
-          <div className="flex justify-center gap-16">
+          <div className="hidden md:flex justify-center gap-16">
             <div className="h-[86px] w-[86px] bg-gray-300 rounded-full"></div>
             <div className="h-[86px] w-[86px] bg-gray-300 rounded-full"></div>
             <div className="h-[86px] w-[86px] bg-gray-300 rounded-full"></div>
