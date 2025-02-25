@@ -1,5 +1,4 @@
 import { SubmitButton } from "@/components/form/Buttons";
-import Navbar from "@/components/navbar/Navbar";
 import { GrAnnounce } from "react-icons/gr";
 
 function DetailRumahPage() {
