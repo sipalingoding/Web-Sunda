@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const images = ["/image1.jpg", "/image2.jpg", "/image3.jpg"];
+const images = ["baduy-1.jpg", "baduy-2.jpg"];
 
 function RegisterPage() {
   const [index, setIndex] = useState(0);
@@ -25,7 +25,7 @@ function RegisterPage() {
     <div className="flex flex-col md:grid md:grid-cols-2 w-full md:min-h-screen h-screen">
       <div className="bg-gray-300 flex items-center justify-center relative rounded-l-2xl overflow-hidden h-1/3 md:h-full">
         <Image
-          src={images[index]}
+          src={`/images/${images}`}
           alt="carousel"
           width={200}
           height={200}

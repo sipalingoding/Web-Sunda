@@ -1,8 +1,8 @@
 function AboutPage() {
   return (
-    <div className="space-y-8 flex flex-col items-center">
+    <div className="space-y-8 flex flex-col items-center mt-8 mb-8">
       <h1 className="font-bold text-3xl">Meet Our Team</h1>
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-row gap-6 flex-wrap items-center justify-center">
         <div className="h-[520px] w-[240px] border-2 border-gray-200 rounded-sm flex flex-col gap-4 p-6 items-center">
           <div className="h-[150px] w-[150px] bg-gray-200 rounded-full"></div>
           <span className="font-semibold">Nama Lengkap</span>
