@@ -53,12 +53,12 @@ function Navbar() {
 
   return (
     <nav className="border-b-2">
-      <div className="container flex flex-col md:flex-row lg:justify-between items-center flex-wrap gap-4 py-4 bg-transparent backdrop-blur-md">
-        <div className="hidden lg:flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+      <div className="container flex flex-row lg:justify-between items-center flex-wrap gap-4 py-4 bg-transparent backdrop-blur-md">
+        <div className="hidden lg:flex gap-3 items-center bg-black text-white rounded-2xl py-3 px-4">
           <FaMoneyCheckDollar />
           <span className="text-xs">Donasi</span>
         </div>
-        <div className="hidden lg:flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+        <div className="hidden lg:flex gap-3 items-center bg-black text-white rounded-2xl py-3 px-4">
           <FaNewspaper />
           <span className="text-xs">Berita</span>
         </div>
@@ -93,13 +93,13 @@ function Navbar() {
           </Sheet>
         </div>
         <span className="text-xl font-bold">Investasi Kehidupan</span>
-        <div className="hidden lg:flex gap-3 items-center bg-green-500 text-white  rounded-2xl py-3 px-4">
+        <div className="hidden lg:flex gap-3 items-center bg-black text-white  rounded-2xl py-3 px-4">
           <RiErrorWarningFill />
           <span className="text-xs">About Us</span>
         </div>
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="hidden lg:flex gap-3 items-center bg-green-500 text-white rounded-2xl py-3 px-4">
+          <DropdownMenuTrigger className="hidden lg:flex gap-3 items-center bg-black text-white rounded-2xl py-3 px-4">
             <FaRegUser />
             <span className="text-xs">{name}</span>
             <IoIosArrowDown />
