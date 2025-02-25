@@ -66,22 +66,34 @@ function Navbar() {
                 <SheetTitle>Investasi Kehidupan</SheetTitle>
               </SheetHeader>
               <div className="grid gap-8 py-8">
-                <div className="flex flex-row items-center gap-4">
+                <Link
+                  href={"/not-found"}
+                  className="flex flex-row items-center gap-4"
+                >
                   <FaNewspaper />
                   <span className="text-sm">Berita</span>
-                </div>
-                <div className="flex flex-row items-center gap-4">
+                </Link>
+                <Link
+                  href={"/donasi"}
+                  className="flex flex-row items-center gap-4"
+                >
                   <FaMoneyCheckDollar />
                   <span className="text-sm">Donasi</span>
-                </div>
-                <div className="flex flex-row items-center gap-4">
+                </Link>
+                <Link
+                  href={"/about"}
+                  className="flex flex-row items-center gap-4"
+                >
                   <RiErrorWarningFill />
                   <span className="text-sm">About Us</span>
-                </div>
-                <div className="flex flex-row items-center gap-4">
+                </Link>
+                <Link
+                  href={"/login"}
+                  className="flex flex-row items-center gap-4"
+                >
                   <FaRegUser />
                   <span className="text-sm">{name}</span>
-                </div>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
