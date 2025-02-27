@@ -27,6 +27,7 @@ import {
 function Navbar() {
   const router = useRouter();
   const [name, setName] = useState("");
+  const [open, setOpen] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -57,9 +58,9 @@ function Navbar() {
           <span className="text-xs">Berita</span>
         </div>
         <div className="grid grid-cols-2 gap-2 lg:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <TbWorld size={30} />
+              <TbWorld size={30} onClick={() => setOpen(true)} />
             </SheetTrigger>
             <SheetContent side={"left"}>
               <SheetHeader>
@@ -69,6 +70,7 @@ function Navbar() {
                 <Link
                   href={"/not-found"}
                   className="flex flex-row items-center gap-4"
+                  onClick={() => setOpen(false)}
                 >
                   <FaNewspaper />
                   <span className="text-sm">Berita</span>
@@ -76,6 +78,7 @@ function Navbar() {
                 <Link
                   href={"/donasi"}
                   className="flex flex-row items-center gap-4"
+                  onClick={() => setOpen(false)}
                 >
                   <FaMoneyCheckDollar />
                   <span className="text-sm">Donasi</span>
@@ -83,6 +86,7 @@ function Navbar() {
                 <Link
                   href={"/about"}
                   className="flex flex-row items-center gap-4"
+                  onClick={() => setOpen(false)}
                 >
                   <RiErrorWarningFill />
                   <span className="text-sm">About Us</span>
@@ -90,6 +94,7 @@ function Navbar() {
                 <Link
                   href={"/login"}
                   className="flex flex-row items-center gap-4"
+                  onClick={() => setOpen(false)}
                 >
                   <FaRegUser />
                   <span className="text-sm">{name}</span>
