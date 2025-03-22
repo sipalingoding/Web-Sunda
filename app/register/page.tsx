@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Dropdown from "@/components/dropdown/Dropdown";
 
 const images = ["baduy-1.jpg", "baduy-2.jpg"];
 
@@ -25,7 +26,7 @@ function RegisterPage() {
     <div className="flex flex-col md:grid md:grid-cols-2 w-full md:min-h-screen h-screen">
       <div className="bg-gray-300 flex items-center justify-center relative rounded-l-2xl overflow-hidden h-1/3 md:h-full">
         <Image
-          src={`/images/${images}`}
+          src={`/images/${images[0]}`}
           alt="carousel"
           width={200}
           height={200}
@@ -49,10 +50,9 @@ function RegisterPage() {
         </h2>
         <form className="space-y-5 w-80">
           <Input type="text" placeholder="Nama" className="w-full px-4 py-3" />
-          <Input
-            type="text"
-            placeholder="Jenis Kelamin"
-            className="w-full px-4 py-3"
+          <Dropdown
+            options={["Pria", "Perempuan"]}
+            placeholder={"Jenis Kelamin"}
           />
           <Input
             type="email"
